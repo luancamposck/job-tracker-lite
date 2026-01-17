@@ -1,6 +1,6 @@
 const JOB_TAGS_STORAGE_KEY = "job-tracker-lite:job-tags:v1"
 
-const getJobTagsStorageRaw = () => {
+function getJobTagsStorageRaw() {
 	if (typeof window === "undefined") {
 		return null
 	}
@@ -8,7 +8,7 @@ const getJobTagsStorageRaw = () => {
 	return window.localStorage.getItem(JOB_TAGS_STORAGE_KEY)
 }
 
-const setJobTagsStorageRaw = (value: string) => {
+function setJobTagsStorageRaw(value: string) {
 	if (typeof window === "undefined") {
 		return
 	}

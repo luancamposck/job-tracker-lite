@@ -5,7 +5,7 @@ import { toast } from "sonner"
 import { getJobTagsStorageRaw, setJobTagsStorageRaw } from "@/features/job-tags/api/job-tags-storage"
 import { type CreateJobTagInput, createJobTagSchema, parseJobTagsStorage } from "@/features/job-tags/model/job-tags"
 
-const useCreateJobTagForm = () => {
+function useCreateJobTagForm() {
 	const form = useForm<CreateJobTagInput>({
 		resolver: zodResolver(createJobTagSchema),
 		defaultValues: {

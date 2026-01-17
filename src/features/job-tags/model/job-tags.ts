@@ -36,7 +36,7 @@ type CreateJobTagInput = z.infer<typeof createJobTagSchema>
 type JobTag = z.infer<typeof jobTagSchema>
 type JobTagsStorage = z.infer<typeof jobTagsStorageSchema>
 
-const parseJobTagsStorage = (raw: string | null): JobTagsStorage => {
+function parseJobTagsStorage(raw: string | null): JobTagsStorage {
 	if (!raw) {
 		return {}
 	}
